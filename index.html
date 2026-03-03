@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechNova 2026 - Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>TechNova 2026</h1>
+    <p>National Level Technical Symposium</p>
+  </header>
+
+  <main class="container">
+
+    <section class="event-info">
+      <h2>About the Event</h2>
+      <p>TechNova is an annual national-level technical symposium organized by the Department of Computer Science.</p>
+
+      <ul>
+        <li><strong>Date:</strong> 18–19 April 2026</li>
+        <li><strong>Time:</strong> 9:00 AM – 5:00 PM</li>
+        <li><strong>Venue:</strong> Govt Arts and Science College , Gudalur</li>
+        <li><strong>Organizer:</strong> Dept. of Computer Science </li>
+      </ul>
+    </section>
+
+    <form id="registrationForm">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone (10 digits) *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Participation</legend>
+        <label for="event">Event *</label>
+        <select id="event" name="event" required>
+          <option value="">— select —</option>
+          <option>Paper Presentation</option>
+          <option>Poster Presentation</option>
+          <option>Project Expo</option>
+          <option>Coding Contest</option>
+          <option>24-Hour Hackathon</option>
+        </select>
+
+        <label>Mode *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="mode" value="Online" required> Online</label>
+          <label><input type="radio" name="mode" value="Offline" required> Offline</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="college">College / Organization *</label>
+        <input type="text" id="college" name="college" required>
+
+        <label for="idproof">ID Proof (optional)</label>
+        <input type="file" id="idproof" name="idproof" accept=".jpg,.jpeg,.png,.pdf">
+
+        <label for="comments">Comments / Questions</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </fieldset>
+
+      <div class="confirmation">
+        <label>
+          <input type="checkbox" id="confirm" required>
+          I confirm that the information is correct
+        </label>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit">Register</button>
+        <button type="reset">Clear form</button>
+      </div>
+
+    </form>
+
+    <section class="dashboard">
+      <h2>Registered Participants</h2>
+
+      <button type="button" id="clearAllBtn" class="danger-btn">
+        Delete ALL registrations
+      </button>
+
+      <table id="participantsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Event</th>
+            <th>Mode</th>
+            <th>College</th>
+            <th>Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Contact: technova2026@gudalur.ac.in  |  Help: +91 98765 43210</p>
+    <p>© 2026 Department of CS, Gudalur</p>
+  </footer>
+
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

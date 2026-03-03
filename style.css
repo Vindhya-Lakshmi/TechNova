@@ -1,0 +1,121 @@
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+header h1 { font-size: 2.8rem; margin-bottom: 0.3rem; }
+
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+
+.event-info, .dashboard {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #6366f1;
+  font-size: 1.25rem;
+  padding: 0 10px;
+}
+
+label { display: block; margin: 1rem 0 0.4rem; font-weight: 500; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"],
+select, textarea, input[type="file"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2.2rem;
+  margin: 0.6rem 0 1.4rem;
+}
+
+.confirmation { margin: 1.4rem 0; font-size: 1.05rem; }
+
+.form-buttons { margin-top: 1.6rem; }
+
+button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+button[type="submit"] { background: #6366f1; color: white; }
+button[type="submit"]:hover { background: #4f46e5; }
+
+button[type="reset"] { background: #94a3b8; color: white; }
+button[type="reset"]:hover { background: #64748b; }
+
+.danger-btn {
+  background: #ef4444;
+  color: white;
+  margin-bottom: 1.2rem;
+}
+
+.danger-btn:hover { background: #dc2626; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th { background: #f1f5f9; color: #334155; }
+
+.delete-btn {
+  background: #f87171;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover { background: #f74949; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .radio-group { flex-direction: column; gap: 0.6rem; }
+}
